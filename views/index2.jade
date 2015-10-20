@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+    meta(charset="UTF-8")
+    title Document
+body
+    h1 This is a static header!
+    #container
+      |!{container.counter}
+    script(type='text/javascript').
+        window.pageInfo = !{JSON.stringify(pageInfo)};
+    script(type='text/javascript',src='/js/page2.js')       
