@@ -25,17 +25,17 @@ document.body.appendChild(oImage);*/
 require('./test.styl');
 var img1 = require('./hello_test.jpg');
 console.log(img1);
-var Hello = React.createClass({displayName: "Hello",	
+var Hello = React.createClass({	
     handleClick: function() {
     ReactDOM.findDOMNode(this.refs.myTextInput).focus();
   },
   render: function() {
     return (
-      React.createElement("div", null, 
-        React.createElement("input", {type: "text", ref: "myTextInput"}), 
-        React.createElement("input", {type: "button", value: "Focus the text input", onClick: this.handleClick}), 
-        React.createElement("img", {src: img1})
-      )
+      <div>
+        <input type="text" ref="myTextInput" />
+        <input type="button" value="Focus the text input" onClick={this.handleClick} />
+        <img src={img1} />
+      </div>
     );
   }
 });

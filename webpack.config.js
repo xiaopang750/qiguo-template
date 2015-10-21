@@ -22,10 +22,10 @@ module.exports = {
 			test: /\.css$/,
 			exclude: ['node_modules'],
 			loader: ExtractTextPlugin.extract("style-loader", "css-loader")
-		},{
+		}, {
 			test: /\.styl$/,
 			exclude: ['node_modules'],
-			loader: ExtractTextPlugin.extract("style-loader","css-loader!stylus-loader")
+			loader: ExtractTextPlugin.extract("style-loader", "css-loader!stylus-loader")
 		}, {
 			test: /\.(png|jpg)$/,
 			exclude: ['node_modules'],
@@ -34,10 +34,10 @@ module.exports = {
 				name: 'img/[name].[ext]'
 			}
 		}, {
-			test: /\.js$/,
+			test: /\.jsx$/,
 			exclude: ['node_modules'],
 			loader: 'babel-loader'
-		}, {
+		},{
 			test: /\.jade$/,
 			exclude: ['node_modules', 'views'],
 			loader: 'jade-loader'
@@ -45,6 +45,7 @@ module.exports = {
 	},
 	plugins: [
 		definePlugin,
-		new ExtractTextPlugin("/css/[name].css")
+		new ExtractTextPlugin("/css/[name].css"),
+		new ExtractTextPlugin("/deji/[name].js")
 	]
 };

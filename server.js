@@ -7,15 +7,15 @@ var routing = require('koa-routing');
 var staticCache = require('koa-static-cache');
 var path = require('path');
 var app = koa();
-var register = require('babel/register');
+//var register = require('babel/register');
 var env = process.env.NODE_ENV;
 var staticPath = env === 'production' ? 'http://cdn.com' : '/img/';
-register({
+/*register({
 	only: [
 		'static',
 		'views'
 	]
-});
+});*/
 require('require-ignore').install(['jpg', 'gif', 'png', 'css', 'styl']);
 require.extensions['.jpg'] = function(module, filename) {
 	module.exports = staticPath + path.basename(filename);

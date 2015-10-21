@@ -1,7 +1,7 @@
 var React = require("react");
 var ReactDom = require("react-dom");
 
-var Page2 = React.createClass({displayName: "Page2",
+var Page2 = React.createClass({
   getInitialState : function(){
     return this.props.pageInfo;
   },
@@ -13,16 +13,16 @@ var Page2 = React.createClass({displayName: "Page2",
   render : function(){
 
     return (
-      React.createElement("div", {onClick: this.onClick}, 
-        "Count (Click to increment): ", this.state.count
-      )
+      <div onClick={this.onClick}>
+        Count (Click to increment): {this.state.count}
+      </div>
     )
   }
 });
 
 
 if(global.document) {
-    ReactDom.render(React.createElement(Page2, {pageInfo: global.pageInfo}), document.getElementById('container'));
+    ReactDom.render(<Page2 pageInfo={global.pageInfo} />, document.getElementById('container'));
 }
 
 module.exports = Page2;
