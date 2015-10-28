@@ -1,3 +1,0 @@
-.components1 {
-  color: #f00;
-}
