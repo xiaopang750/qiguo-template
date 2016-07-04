@@ -33,8 +33,10 @@ var Hello = React.createClass({displayName: "Hello",
     return (
       React.createElement("div", null, 
         React.createElement("input", {type: "text", ref: "myTextInput"}), 
-        React.createElement("input", {type: "button", value: "Focus the text input", onClick: this.handleClick}), 
-        React.createElement("img", {src: img1})
+        React.createElement("input", {type: "button", value: "Focus the text input", onClick: this.handleClick})
+        
+          /*<img src={img1} />*/
+        
       )
     );
   }

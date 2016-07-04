@@ -34,7 +34,9 @@ var Hello = React.createClass({
       <div>
         <input type="text" ref="myTextInput" />
         <input type="button" value="Focus the text input" onClick={this.handleClick} />
-        <img src={img1} />
+        {
+          /*<img src={img1} />*/
+        }
       </div>
     );
   }
